@@ -17,6 +17,6 @@ jobs:
         run: echo "Hello world mofo!"
 
       - name: Intentional failure
-        run: exit 1
+        run: exit 0
 
 
