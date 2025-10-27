@@ -1,4 +1,4 @@
-name: CI dummy test to check it works
+name: CI test to see how it works
 
 on:
   push:
@@ -9,8 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository code
-        uses: actions/checkout@v4
 
-      - name: Say Hello
-        run: echo "Hello World!"
+      - name: Checkout repository code
+      - uses: actions/checkout@v4
+
+      - name: say hello
+        run: echo "Hello world mofo!"
+
+      - name: Intentional failure
+        run: exit 1
+
+
