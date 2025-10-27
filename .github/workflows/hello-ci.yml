@@ -1,5 +1,4 @@
-
-name: Hello World CI
+name: CI dummy test to check it works
 
 on:
   push:
@@ -10,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository code
+      - name: Checkout repository code
         uses: actions/checkout@v4
 
-      - name: Say hello
-        run: echo "Hello from Github Actions!"
+      - name: Say Hello
+        run: echo "Hello World!"
