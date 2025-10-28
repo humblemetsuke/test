@@ -1,0 +1,34 @@
+name: Step 3 of the CI CD tutorial
+
+on:
+  push:
+    branches:  [main]
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: show current directory
+        run: pwd
+      - name: List files
+        run: ls -la
+      - name: Show OS and environment info
+        run: |
+          echo "== System Info =="
+          lsb_release -a || cat /etc/os-release
+          echo
+          echo "== Python version =="
+          python3 --version
+          echo
+          echo "== Installed tools (short list) =="
+          which git python3 pip
+          echo
+          echo "== Free space =="
+          df -h
+
+          
+
